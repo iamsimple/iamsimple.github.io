@@ -22,10 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("engine", engine);
     }
     let localEngineName = getLoclEngine();
-    let localEngine = searchEngines.find((val) => val.name === localEngineName)
-    if (localEngine) {
-        setEngine(localEngine)
-    }
+    let localEngine = searchEngines.find((val) => val.name === localEngineName) || searchEngines[0]
+    setEngine(localEngine)
     let liStr = '';
     for (let i = 0; i < searchEngines.length; i++) {
         const engine = searchEngines[i];
