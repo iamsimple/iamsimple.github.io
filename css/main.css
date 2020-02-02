@@ -9,7 +9,11 @@ body {
     font-size: 15px;
 }
 .main-logo {
-    margin-top: 20px;
+    margin-top: 60px;
+}
+.main-logo-img {
+    border-radius: 10px;
+    height: 150px;
 }
 .main-search {
     display: inline-block;
@@ -17,11 +21,12 @@ body {
     margin-top: 30px;
     text-align: left;
     border:1px solid #cecece;
-    border-radius: 10px;
     box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    opacity: .9;
 }
 .main-search:hover {
-    box-shadow: 0px 2px 12px 0 rgba(0,0,0,.2);
+    opacity: 1;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.2);
 }
 .search-content {
     width: 540px;
@@ -66,10 +71,13 @@ body {
     height:  36px;
     width:  100px;
     border-style: none;
-    border-radius: 0 10px 10px 0;
     background: #3385ff;
     color: white;
     letter-spacing: 3px;
     line-height: 1;
     cursor: pointer;
+    opacity: .9;
+}
+.search-btn:hover {
+    opacity: 1;
 }

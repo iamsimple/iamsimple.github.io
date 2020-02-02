@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     button.onclick = function (e) {
+        this.blur()
         window.open(searchEngine.dataset.url + input.value)
     }
     document.onclick = function (e) {
