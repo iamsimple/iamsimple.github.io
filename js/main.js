@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ul.style.display = "none";
         }
     }
-    ulDIsplay()
+    ul.style.display = "none";
     ul.innerHTML = liStr;
     for (let i = 0; i < ul.children.length; i++) {
         ul.children[i].onclick = function (e) {
