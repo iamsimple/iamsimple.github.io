@@ -23,6 +23,7 @@ body {
     border:1px solid #cecece;
     box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
     opacity: .9;
+    transition-duration: 0.4s;
 }
 .main-search:hover {
     opacity: 1;
@@ -41,30 +42,44 @@ body {
     text-align: center;
     margin: 0 5px;
     line-height: 36px;
-    opacity: 0.5;
+    opacity: 0.8;
     cursor: pointer;
 }
+.search-engine {
+    width: 50px;
+    display: inline-block;
+}
+.search-engine:hover .search-select-menu {
+    display: block;
+}
 .search-select-menu {
+    transition-duration: .3s;
+    display: none;
     position: relative;
     top: 5px;
 }
-.search-select-menu li{
+.search-select-menu li {
     list-style: none;
     width: 40px;
     text-align: center;
     margin: 0 5px;
     line-height: 36px;
-    opacity: 0.5;
+    opacity: 0.8;
     cursor: pointer;
+    transition-duration: .3s;
+}
+.search-select-menu li:hover {
+    color: #3385ff;
 }
 .search-input {
-    height:  32px;
+    height:  36px;
     width: 430px;
     font: 16px/18px arial;
     letter-spacing: 1px;
     line-height: 36px;
     border: none;
     outline: none;
+    vertical-align: top;
 }
 .search-btn {
     float: right;

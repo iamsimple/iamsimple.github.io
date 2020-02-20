@@ -7,10 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // { name: "本站", url: "5" }
     ]
     let searchEngine = document.getElementById('search-engine');
-    searchEngine.onclick = function (e) {
-        e.stopPropagation()
-        ulDIsplay()
-    }
+
     function setEngine(engine) {
         searchEngine.innerHTML = engine.name;
         searchEngine.dataset.url = engine.url;
@@ -30,23 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
         liStr +=  '<li  data-url="'+ engine.url +'">' + engine.name + '</li>'
     }
     let ul = document.getElementById('search-select-menu');
-    function ulDIsplay(hidden) {
-        if (hidden) {
-            ul.style.display =  "none";
-        } else if (ul.style.display === "none") {
-            ul.style.display =  "";
-        } else {
-            ul.style.display = "none";
-        }
-    }
-    ul.style.display = "none";
     ul.innerHTML = liStr;
     for (let i = 0; i < ul.children.length; i++) {
         ul.children[i].onclick = function (e) {
             setEngine({ name: this.innerHTML, url: this.dataset.url })
             setLocalEngine(this.innerHTML)
-            ulDIsplay()
-            e.stopPropagation()
         }
     }
 
@@ -60,9 +45,5 @@ document.addEventListener("DOMContentLoaded", function () {
     button.onclick = function (e) {
         this.blur()
         window.open(searchEngine.dataset.url + input.value)
-    }
-    document.onclick = function (e) {
-        e.stopPropagation()
-        ulDIsplay(true)
     }
 })
